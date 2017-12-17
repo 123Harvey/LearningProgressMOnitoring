@@ -1,0 +1,364 @@
+.new-post{
+    padding: 16px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.new-post header,
+.post header{
+    margin-bottom: 20px;
+}
+
+.posts .post{
+    padding-left:10px;
+    border-left:3px solid #a21b24;
+    margin-bottom:30px;
+}
+
+.posts .post .info{
+    color:#aaa;
+    font-style:italic;
+}
+.error, success{
+    text-align: center;
+}
+.error{
+    border: 1px solid red;
+    border-color: #f9b5af;
+    color:red;
+}
+
+.error ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.success{
+    border:0px solid green;`
+    background-color: #d1f9da;
+    color:green;
+}
+
+.border{
+    border:0px solid black;
+     background-color: green;
+     box-shadow: 0px 0px 5px .5px blue;
+
+     width: 35%;
+     height: 450px;
+     background-color: white;x
+     font-family: raleway;
+
+
+}
+.row{
+    border:0px solid black;
+     background-color: green;
+     box-shadow: 0px 0px 5px .5px    blue;
+
+     width: 35%;
+     height: 665px;
+     background-color: white;
+     font-family: raleway;
+
+border-radius: 0px;
+}
+.border{
+         
+            background-repeat: no-repeat;
+            background-position: center; top;
+            padding-top:0px;
+            margin-bottom:60px;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+.row{
+         
+            background-repeat: no-repeat;
+            background-position: center top;
+            padding-top:0px;
+            margin-bottom:0px;
+            -webkit-animation-duration: 1s;
+            animation-duration:1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+          
+         
+         @keyframes fadeInUp {
+            0% {
+               opacity: 0;
+               transform: aaitranslate3d(0,5%,0);
+            }
+          
+           a
+         }
+         
+         .fadeInUp{
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+         }
+
+.form-control {
+    background-color: white;
+    border: 0;
+    color: black;
+    padding: 10px 13%;
+    text-align: left;
+    text-decoration: none;
+    
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px;
+ box-shadow: 0px 0px 1px 1px gray;
+}
+.labels {
+    font-weight: 200;
+}
+.submitbutton{
+    background-color:#0066cc;
+    border: none;
+    color: white;
+    padding: 15px 28%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+     font-family: raleway;
+    margin: 4px 0px;
+    cursor: pointer;
+
+    margin-left:10px "
+}
+.submitbutton:hover {    
+background-color:blue ;   
+    color: white;
+    border: 0px solid lightblue;
+}
+.loginbutton {
+    background-color:#0066cc;
+    border: none;
+    color: white;
+    padding: 15px 33%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+   
+    margin: 4px 2px;
+    cursor: pointer;  font-family: raleway;
+}
+.loginbutton:hover {    
+background-color:blue ;   
+    color: white;
+    border: 0px solid lightblue;
+}
+
+#col-md-6 label {
+  text-align: center;
+  display: block;
+}
+div.container {
+    width: 100%;
+    border: 0px solid gray;
+      font-family: raleway;
+      margin-top: -20px;
+     margin-left: -4px;
+     margin-right: -50px;
+
+    }
+
+    .container{
+         
+            background-repeat: no-repeat;
+            background-position: center top;
+            padding-top:0px;
+            margin-bottom:0px;
+            -webkit-animation-duration: 1s;
+            animation-duration:1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+          
+         
+         @keyframes fadeInUp {
+            0% {
+               opacity: 0;
+               transform: translate3d(0,5%,0);
+            }
+          
+           
+         }
+         
+         .fadeInUp{
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+         }
+
+
+
+
+#notification_count {
+padding: 0px 5px 2px 7px;
+background: #cc0000;
+color: #ffffff;
+font-weight: bold;
+margin-left: 115px;
+border-radius: 9px;
+position: absolute;
+margin-top: 0px;
+font-size: 13px;
+}
+
+.search{
+border-radius: 3px;
+    height: 25px;
+    width: 200px;
+}
+.headertable{
+
+    border-top: 0px solid silver;
+}
+.art{
+
+    border-top: 0px solid silver;
+    margin-left: -5px;
+}
+
+.button {
+    background-color: white;
+    border: none;   
+    color: white;   
+    padding: 0px 0px;        
+   display: inline-block;   
+    font-size: 19px; 
+    margin: 0px 0px;   
+transition-duration: 0.4s;
+  font-family: raleway;
+    cursor: pointer;
+
+}
+.button1 {border-radius: 0px;}
+.button2 {border-radius: 0px;}
+.button3 {border-radius: 0px;}
+.button4 {border-radius: 0px;}
+.button5{border-radius: 0px;}
+.button6{border-radius: 0px;}
+
+.button1 {
+   
+    background-color:  white;
+     color:white;
+    border: 0px solid white;
+    }
+.button1:hover {    
+background-color:white ;   
+    color: #182286;
+    border: 0px solid white;
+}
+
+.button2 {
+   
+    background-color: white;
+     color: white;
+   border: 0px solid white;
+    }
+.button2:hover {    
+background-color:white ;   
+    color: blue;
+      border: 1px solid #034F84;
+}
+.button3 {
+   
+    background-color: white;
+     color: white;
+   border: 0px solid white;
+    }
+.button3:hover {    
+background-color:white ;   
+    color: blue;
+      border: 1px solid #034F84;
+}
+.button4 {
+   
+    background-color: white;
+     color: white;
+   border: 0px solid white;
+    }
+.button4:hover {    
+background-color:white ;   
+    color: blue;
+      border: 1px solid #034F84;
+}
+.button5 {
+   
+    background-color:  white;
+     color: white;
+   border: 0px solid white;
+    }
+.button5:hover {    
+background-color:white ;   
+    color: blue;
+      border: 1px solid #034F84;
+}
+.button6 {
+   
+    background-color: white;
+     color: white;
+   border: 0px solid white;
+    }
+.button6:hover {    
+background-color:white ;   
+    color: blue;
+      border: 1px solid #034F84;
+}
+#notification_count {
+padding: 0px 5px 2px 7px;
+background: #cc0000;
+color: #ffffff;
+font-weight: bold;
+margin-left: 95px;
+border-radius: 9px;
+position: absolute;
+margin-top: 2px;
+font-size: 13px;
+}
+.subbutton{
+    height: 30px;
+    width: 150px;
+    border-radius: 3px;
+    background-color: red;
+}
+.page-header h2{
+  margin-top: 0;
+ 
+}
+
+  ul{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #182286;
+    margin-bottom: 0px;
+  }
+  li{
+    float: left;
+  }
+  li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+  }
+  li a:hover{
+    background-color: #4169E1;
+    color: white;
+  }
+.user{
+  font-size: 40px;
+font-weight: bolder;
+margin-top: -20px;
+}
