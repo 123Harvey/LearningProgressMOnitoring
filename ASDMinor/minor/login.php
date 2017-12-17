@@ -18,11 +18,24 @@ if(isset($_SESSION['user'])){
     height: 350px;
   }
 .loginbutton{
-  padding: 10px 37%;
+  padding: 10px 38%;
 }
 .reg{
   color: green;
   font-size: 20px;
+}
+.btnregister{
+
+  background-color: green;
+  color: white;
+  font-size: 15px;
+  border: 0;
+  height: 20px;
+}
+.btnregister:hover{
+  background-color: white;
+  color: green;
+  border-bottom: 1px solid blue;
 }
 </style>
 </head>
@@ -34,7 +47,7 @@ if(isset($_SESSION['user'])){
   <br>
 <center>
   <div class ="border fadeInUp" >
-     <a href ="../minor/register.php" style="text-decoration: underline; margin-left: -300px" class="reg">Register</a>
+    
                 <form action="../minor/login.php" method="post">
 
                   <img src="../html/dti.png"  >
@@ -48,8 +61,10 @@ if(isset($_SESSION['user'])){
                         <input  class="form-control"  type="password" name="password" id="password"  placeholder="Password">
                         <br>
                         <br>
-                        <input class="loginbutton "  type="submit" name="btnSubmit">
+                        <input class="loginbutton "  type="submit" name="btnSubmit" value="Login">
+
                 </form>
+                 <a href ="../minor/register.php" style="text-decoration: underline; margin-left: 280px" class="reg"><button class="btnregister">Register </button>
                 <?php @INCLUDE_ONCE('../minor/config.php');
                  if(isset($_POST['btnSubmit'])){
                   $user = $_POST['user'];
