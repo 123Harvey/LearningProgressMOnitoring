@@ -9,7 +9,7 @@ function togetQuantity($getpr)
 {
 	INCLUDE_once('../minor/config.php');
 		$sql = "UPDATE category
-		SET category_name = null, category_date = null,pr_id = null
+		SET category_name = '', category_date = null
 		WHERE pr_id = ".$getpr.";";
 	$result = $con->query($sql);
 	if($con->query($sql))

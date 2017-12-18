@@ -87,7 +87,7 @@ FROM (((((((((`particulars` `p`
    LEFT JOIN `quantity` `q`
      ON ((`p`.`pr_id` = `q`.`pr_id`)))
 WHERE acceptance_turn_over IS not NULL
-AND category_name IS NULL";
+AND category_name =''";
 	$result = $con->query($sql);
 	if($result->num_rows > 0)
 	{ 

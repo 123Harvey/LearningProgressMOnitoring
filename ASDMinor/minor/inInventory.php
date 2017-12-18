@@ -211,7 +211,7 @@ FROM (((((((((`particulars` `p`
 			echo '</tr>';
 		}
 
-		echo "Quantity".$_SESSION['Quantity'];
+		echo "<strong/><h1 />Quantity:".$_SESSION['Quantity'];
 	}else{
 	}
 	if($con->query($sql))

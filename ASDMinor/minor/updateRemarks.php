@@ -150,8 +150,10 @@ $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password
   if($con->connect_errno){
 
     die("Could not connect: ".$con->connect_error);
+  
   }
-        $sql = "Insert into category(category_name,category_date,pr_id) Values ('".$_SESSION['category']."',Current_Date,".$_SESSION['prid'].");";
+  echo $_SESSION['category']."   ".$_SESSION['prid'];
+        $sql = "Update category SET category_name='".$_SESSION['category']."' where pr_id = ".$_SESSION['prid'].";";
         if($con->query($sql))
         //echo "Database created successfully";successfully created I
         echo "Registered successfully";

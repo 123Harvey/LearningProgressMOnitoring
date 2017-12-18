@@ -176,7 +176,7 @@ WHERE ((`d`.`acceptance_turn_over` IS NOT NULL)
 			echo '</tr>';
 					
 		}
-		echo "Quantity".$_SESSION['Quantity'];
+		echo "<strong/><h1 />Quantity:".$_SESSION['Quantity'];
 	}else{
 	}
 	if($con->query($sql))
