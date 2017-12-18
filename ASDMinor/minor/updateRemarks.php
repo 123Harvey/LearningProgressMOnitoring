@@ -4,7 +4,7 @@ if(!isset($_SESSION['user'])){
     header("location:../minor/login.php");
 }
 // including the database connection file
-include("../serverConfig/serverCon.php");
+include("../minor/config.php");
 if(isset($_POST['update']))
 {   
 
@@ -41,42 +41,122 @@ if(isset($_POST['update']))
     } else {    */
         //updating the table
         //particulars
-       $con = viaAttempConMessageErrno();
+    $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
         $sql = "UPDATE particulars SET pr_number='$prnumber',particulars_details='$particulars_details' WHERE pr_id=".$_SESSION['prid'].";";
-        viaMessageUpdate($sql,$con);
+        if($con->query($sql))
+        //echo "Database created successfully";successfully created I
+        echo "Registered successfully";
+      else
+        die("Eror input");
         //supplier
-      $con = viaAttempConMessageErrno();
+     $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
         $sql = "UPDATE supplier SET supplier_name='".$suppliername."' WHERE supplier_id=".$_SESSION['supplier_id'].";";
-        viaMessageUpdate($sql,$con);
+    if($con->query($sql))
+        //echo "Database created successfully";successfully created I
+        echo "Registered successfully";
+      else
+        die("Eror input");
       //cashier
-        $con = viaAttempConMessageErrno();
+       $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
         $sql = "UPDATE cashier SET cashier_date='".$cashierdate."' WHERE cashier_id =".$_SESSION['cashier_id'].";";
-        viaMessageUpdate($sql,$con);
+       if($con->query($sql))
+        //echo "Database created successfully";successfully created I
+        echo "Registered successfully";
+      else
+        die("Eror input");
       //accounting
-        $con = viaAttempConMessageErrno();
+       $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
         $sql = "UPDATE accounting SET accounting_date='".$date."' WHERE accounting_id=".$_SESSION['accounting_id'].";";
-        viaMessageUpdate($sql,$con);
+       if($con->query($sql))
+        //echo "Database created successfully";successfully created I
+        echo "Registered successfully";
+      else
+        die("Eror input");
         //remarks
-        $con = viaAttempConMessageErrno();
+        $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
         $sql = "UPDATE remarks SET remarks_details='".$remarksdetails."' WHERE pr_id=".$_SESSION['prid'].";";
-        viaMessageUpdate($sql,$con);
+        if($con->query($sql))
+        //echo "Database created successfully";successfully created I
+        echo "Registered successfully";
+      else
+        die("Eror input");
         //delivery
-        $con = viaAttempConMessageErrno();
+       $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
         $sql = "UPDATE delivery SET notice_to_proceed='".$noticetoproceed."', delivery_completion='".$deliverycompletion."', acceptance_turn_over='".$acceptanceturnover."',ci_no='".$cinumber."',number_of_days_po_to_delivery=".$podelivery.",number_of_days_delivery_to_cashier=".$deliverycashier." WHERE pr_id=".$_SESSION['prid'].";";
-        viaMessageUpdate($sql,$con);
+        if($con->query($sql))
+        //echo "Database created successfully";successfully created I
+        echo "Registered successfully";
+      else
+        die("Eror input");
         //cost
-        $con = viaAttempConMessageErrno();
+       $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
         $sql = "UPDATE cost SET po_number='".$ponumber."',total_actual_cost=".$totalactualcost.",total_approved_budget_cost=".$totalapprovedcost." WHERE accounting_id=".$_SESSION['accounting_id'].";";
-        viaMessageUpdate($sql,$con);
+        if($con->query($sql))
+        //echo "Database created successfully";successfully created I
+        echo "Registered successfully";
+      else
+        die("Eror input");
         //reqdiv
-        $con = viaAttempConMessageErrno();
+       $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
             echo "-------------";
         $sql = "UPDATE req_div SET division='".$requestingdivision."' WHERE pr_id=".$_SESSION['prid'].";";
-        viaMessageUpdate($sql,$con);
+        if($con->query($sql))
+        //echo "Database created successfully";successfully created I
+        echo "Registered successfully";
+      else
+        die("Eror input");
+$con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
 
-        $con = viaAttempConMessageErrno();
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
         $sql = "Insert into category(category_name,category_date,pr_id) Values ('".$_SESSION['category']."',Current_Date,".$_SESSION['prid'].");";
-        viaMessageUpdate($sql,$con);
+        if($con->query($sql))
+        //echo "Database created successfully";successfully created I
+        echo "Registered successfully";
+      else
+        die("Eror input");
         header("location:../minor/remarksview.php");
     }
 //}
@@ -84,13 +164,18 @@ if(isset($_POST['update']))
 
 particulars();
 function particulars(){
-todo(' ');
+include("../minor/config.php");
 //getting id from url
 $_SESSION['prid'] = $_GET['prid'];  
 $_SESSION['category'] = $_GET['category'];
 
 //selecting data associated with this particular id
-  $con = viaAttempConMessageErrno();
+  $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
   $sql = "SELECT * FROM particulars WHERE pr_id = ".$_SESSION['prid'].";";
   $result = $con->query($sql);
 
@@ -115,11 +200,17 @@ $_SESSION['category'] = $_GET['category'];
 
 function supplier()
 {
-todo(' ');
+include("../minor/config.php");
 //getting id from url
 //selecting data associated with this particular id
 
-  $con = viaAttempConMessageErrno();
+  $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
+  
   $sql = "SELECT * FROM supplier where supplier_id = ".$_SESSION['supplier_id'].";";
   $result = $con->query($sql);
 
@@ -138,10 +229,15 @@ todo(' ');
 
 function cashier()
 {
-todo(' ');
+include("../minor/config.php");
 //getting id from url
 //selecting data associated with this particular id
-  $con = viaAttempConMessageErrno();
+  $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
   $sql = "SELECT * FROM cashier where supplier_id = ".$_SESSION['supplier_id'].";";
   $result = $con->query($sql);
 
@@ -161,8 +257,13 @@ todo(' ');
 
 function accounting()
 {
-todo(' ');
-  $con = viaAttempConMessageErrno();
+include("../minor/config.php");
+  $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
   $sql = "SELECT * FROM accounting where cashier_id = ".$_SESSION['cashier_id'].";";
   $result = $con->query($sql);
 
@@ -182,11 +283,16 @@ todo(' ');
 
 function remarks()
 {
-todo(' ');
+include("../minor/config.php");
 //getting id from url
 //selecting data associated with this particular id
 
-  $con = viaAttempConMessageErrno();
+  $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
   $sql = "SELECT * FROM remarks where pr_id =".$_SESSION['prid'].";";
   $result = $con->query($sql);
 
@@ -207,11 +313,16 @@ todo(' ');
 
 function delivery()
 {
-todo(' ');
+include("../minor/config.php");
 //getting id from url
 //selecting data associated with this particular id
 
-  $con = viaAttempConMessageErrno();
+  $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
   $sql = "SELECT * FROM delivery where pr_id =".$_SESSION['prid'].";";
   $result = $con->query($sql);
 
@@ -237,11 +348,16 @@ todo(' ');
 
 function cost()
 {
-todo(' ');
+include("../minor/config.php");
 //getting id from url
 //selecting data associated with this particular id
 
-  $con = viaAttempConMessageErrno();
+  $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
   $sql = "SELECT * FROM cost where accounting_id=".$_SESSION['accounting_id'].";";
   $result = $con->query($sql);
 
@@ -263,10 +379,15 @@ todo(' ');
 
 
 function req_div(){
-todo(' ');
+include("../minor/config.php");
 //getting id from url
 //selecting data associated with this particular id
-  $con = viaAttempConMessageErrno();
+  $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
   $sql = "SELECT * FROM req_div where pr_id =".$_SESSION['prid'].";";
   $result = $con->query($sql);
 

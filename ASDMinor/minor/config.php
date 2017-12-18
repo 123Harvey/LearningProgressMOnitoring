@@ -13,7 +13,10 @@
 	$password = "";	
 	$dbname = "dti_procurement";								//add when adding table
 	$con = new mysqli($server, $username , $password,$dbname);
-
+	$_SESSION['server'] = $server;
+ 	$_SESSION['username'] = $username;
+ 	$_SESSION['password'] = $password;
+ 	$_SESSION['dbname'] = $dbname;
 	if($con->connect_errno)
 		die("Could not connect: ".$con->connect_error);
 

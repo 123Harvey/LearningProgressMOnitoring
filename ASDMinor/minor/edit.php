@@ -5,7 +5,7 @@ if(!isset($_SESSION['user'])){
 }
 session_start();
 // including the database connection file
-include("../serverConfig/serverCon.php");
+include("../serverCon.php");
 if(isset($_POST['update']))
 {   
 
