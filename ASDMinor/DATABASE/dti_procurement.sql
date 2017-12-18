@@ -27,11 +27,11 @@ CREATE TABLE `accounting` (
   PRIMARY KEY (`accounting_id`),
   UNIQUE KEY `accounting_id` (`accounting_id`),
   KEY `idx_accounting` (`cashier_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `accounting` */
 
-insert  into `accounting`(`accounting_id`,`accounting_date`,`cashier_id`) values (1,'2017-01-02',1),(2,'2017-01-01',2),(3,'2017-02-02',3),(4,'2017-03-03',4),(5,'2018-03-04',5),(6,'2017-02-01',6);
+insert  into `accounting`(`accounting_id`,`accounting_date`,`cashier_id`) values (1,'2017-01-02',1),(2,'2017-01-01',2),(3,'2017-02-02',3),(4,'2017-03-03',4),(5,'2018-03-04',5),(6,'2017-02-01',6),(7,'2017-01-01',7);
 
 /*Table structure for table `accounting_logs` */
 
@@ -44,11 +44,11 @@ CREATE TABLE `accounting_logs` (
   `changedon` datetime DEFAULT NULL,
   `action` varchar(20) DEFAULT NULL,
   KEY `accounting_id` (`accounting_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `accounting_logs` */
 
-insert  into `accounting_logs`(`accounting_id`,`accounting_date`,`cashier_id`,`changedon`,`action`) values (1,'2017-01-02',1,'2017-12-13 14:10:05','Insert'),(1,'2017-01-02',1,'2017-12-13 14:10:22','Update'),(2,'2017-01-01',2,'2017-12-13 14:25:08','Insert'),(3,'2017-02-02',3,'2017-12-13 14:25:57','Insert'),(4,'2017-03-03',4,'2017-12-13 14:26:39','Insert'),(5,'2018-03-04',5,'2017-12-13 14:27:26','Insert'),(6,'2017-02-01',6,'2017-12-13 14:28:37','Insert'),(1,'2017-01-02',1,'2017-12-13 14:34:15','Update'),(1,'2017-01-02',1,'2017-12-13 14:34:53','Update'),(2,'2017-01-01',2,'2017-12-13 14:35:34','Update'),(2,'2017-01-01',2,'2017-12-13 14:40:05','Update'),(3,'2017-02-02',3,'2017-12-13 14:40:15','Update'),(4,'2017-03-03',4,'2017-12-13 14:40:22','Update'),(6,'2017-02-01',6,'2017-12-13 14:40:32','Update'),(5,'2018-03-04',5,'2017-12-13 14:40:57','Update');
+insert  into `accounting_logs`(`accounting_id`,`accounting_date`,`cashier_id`,`changedon`,`action`) values (1,'2017-01-02',1,'2017-12-13 14:10:05','Insert'),(1,'2017-01-02',1,'2017-12-13 14:10:22','Update'),(2,'2017-01-01',2,'2017-12-13 14:25:08','Insert'),(3,'2017-02-02',3,'2017-12-13 14:25:57','Insert'),(4,'2017-03-03',4,'2017-12-13 14:26:39','Insert'),(5,'2018-03-04',5,'2017-12-13 14:27:26','Insert'),(6,'2017-02-01',6,'2017-12-13 14:28:37','Insert'),(1,'2017-01-02',1,'2017-12-13 14:34:15','Update'),(1,'2017-01-02',1,'2017-12-13 14:34:53','Update'),(2,'2017-01-01',2,'2017-12-13 14:35:34','Update'),(2,'2017-01-01',2,'2017-12-13 14:40:05','Update'),(3,'2017-02-02',3,'2017-12-13 14:40:15','Update'),(4,'2017-03-03',4,'2017-12-13 14:40:22','Update'),(6,'2017-02-01',6,'2017-12-13 14:40:32','Update'),(5,'2018-03-04',5,'2017-12-13 14:40:57','Update'),(1,'2017-01-02',1,'2017-12-18 19:39:31','Update'),(0,'2017-01-01',7,'2017-12-18 20:04:29','Insert'),(7,'2017-01-01',7,'2017-12-18 20:05:07','Update');
 
 /*Table structure for table `cashier` */
 
@@ -61,11 +61,11 @@ CREATE TABLE `cashier` (
   PRIMARY KEY (`cashier_id`),
   UNIQUE KEY `cashier_id` (`cashier_id`),
   KEY `idx_cashier` (`supplier_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `cashier` */
 
-insert  into `cashier`(`cashier_id`,`cashier_date`,`supplier_id`) values (1,'2017-01-01',1),(2,'2017-01-01',4),(3,'2017-01-02',5),(4,'2017-03-03',6),(5,'2018-02-02',7),(6,'2017-02-04',8);
+insert  into `cashier`(`cashier_id`,`cashier_date`,`supplier_id`) values (1,'2017-01-01',1),(2,'2017-01-01',4),(3,'2017-01-02',5),(4,'2017-03-03',6),(5,'2018-02-02',7),(6,'2017-02-04',8),(7,'2018-01-01',11);
 
 /*Table structure for table `cashier_logs` */
 
@@ -78,11 +78,11 @@ CREATE TABLE `cashier_logs` (
   `cashier_date` date DEFAULT NULL,
   `changedon` datetime DEFAULT NULL,
   KEY `cashier_id` (`cashier_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `cashier_logs` */
 
-insert  into `cashier_logs`(`cashier_id`,`supplier_id`,`action`,`cashier_date`,`changedon`) values (1,1,'Insert','2017-01-01','2017-12-13 14:10:05'),(1,1,'Update','2017-01-01','2017-12-13 14:10:22'),(2,4,'Insert','2017-01-01','2017-12-13 14:25:08'),(3,5,'Insert','2017-01-02','2017-12-13 14:25:56'),(4,6,'Insert','2017-03-03','2017-12-13 14:26:39'),(5,7,'Insert','2018-02-02','2017-12-13 14:27:25'),(6,8,'Insert','2017-02-04','2017-12-13 14:28:37'),(1,1,'Update','2017-01-01','2017-12-13 14:34:15'),(1,1,'Update','2017-01-01','2017-12-13 14:34:52'),(2,4,'Update','2017-01-01','2017-12-13 14:35:34'),(2,4,'Update','2017-01-01','2017-12-13 14:40:05'),(3,5,'Update','2017-01-02','2017-12-13 14:40:15'),(4,6,'Update','2017-03-03','2017-12-13 14:40:22'),(6,8,'Update','2017-02-04','2017-12-13 14:40:32'),(5,7,'Update','2018-02-02','2017-12-13 14:40:57');
+insert  into `cashier_logs`(`cashier_id`,`supplier_id`,`action`,`cashier_date`,`changedon`) values (1,1,'Insert','2017-01-01','2017-12-13 14:10:05'),(1,1,'Update','2017-01-01','2017-12-13 14:10:22'),(2,4,'Insert','2017-01-01','2017-12-13 14:25:08'),(3,5,'Insert','2017-01-02','2017-12-13 14:25:56'),(4,6,'Insert','2017-03-03','2017-12-13 14:26:39'),(5,7,'Insert','2018-02-02','2017-12-13 14:27:25'),(6,8,'Insert','2017-02-04','2017-12-13 14:28:37'),(1,1,'Update','2017-01-01','2017-12-13 14:34:15'),(1,1,'Update','2017-01-01','2017-12-13 14:34:52'),(2,4,'Update','2017-01-01','2017-12-13 14:35:34'),(2,4,'Update','2017-01-01','2017-12-13 14:40:05'),(3,5,'Update','2017-01-02','2017-12-13 14:40:15'),(4,6,'Update','2017-03-03','2017-12-13 14:40:22'),(6,8,'Update','2017-02-04','2017-12-13 14:40:32'),(5,7,'Update','2018-02-02','2017-12-13 14:40:57'),(1,1,'Update','2017-01-01','2017-12-18 19:39:31'),(0,11,'Insert','2018-01-01','2017-12-18 20:04:28'),(7,11,'Update','2018-01-01','2017-12-18 20:05:07');
 
 /*Table structure for table `category` */
 
@@ -94,11 +94,11 @@ CREATE TABLE `category` (
   `category_date` date NOT NULL,
   `pr_id` int(11) NOT NULL,
   KEY `category_id` (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 /*Data for the table `category` */
 
-insert  into `category`(`category_id`,`category_name`,`category_date`,`pr_id`) values (1,'','0000-00-00',0),(2,'','0000-00-00',0),(3,'foods','2017-12-13',1),(4,'','0000-00-00',0),(5,'foods','2017-12-13',4),(6,'hardware','2017-12-13',5),(7,'hardware','2017-12-13',6),(8,'rental','2017-12-13',8),(9,'foods','2017-12-13',7);
+insert  into `category`(`category_id`,`category_name`,`category_date`,`pr_id`) values (1,'','0000-00-00',0),(2,'','0000-00-00',0),(3,'','0000-00-00',0),(4,'','0000-00-00',0),(5,'foods','2017-12-13',4),(6,'hardware','2017-12-13',5),(7,'hardware','2017-12-13',6),(8,'rental','2017-12-13',8),(9,'','0000-00-00',0),(10,'foods','2017-12-18',1),(11,'hardware','2017-12-18',10);
 
 /*Table structure for table `cost` */
 
@@ -106,18 +106,18 @@ DROP TABLE IF EXISTS `cost`;
 
 CREATE TABLE `cost` (
   `po_id` int(11) NOT NULL AUTO_INCREMENT,
-  `po_number` varchar(10) DEFAULT NULL,
+  `po_number` text,
   `total_actual_cost` int(11) DEFAULT NULL,
   `total_approved_budget_cost` int(11) DEFAULT NULL,
   `accounting_id` int(11) NOT NULL,
   PRIMARY KEY (`po_id`),
   KEY `idx_cost` (`po_id`),
   KEY `idx_cost_0` (`accounting_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `cost` */
 
-insert  into `cost`(`po_id`,`po_number`,`total_actual_cost`,`total_approved_budget_cost`,`accounting_id`) values (1,'1',1,1,1),(2,'1',1,2,2),(3,'1',2,2,3),(4,'2',2,2,4),(5,'4',4,4,5),(6,'2',3,3,6);
+insert  into `cost`(`po_id`,`po_number`,`total_actual_cost`,`total_approved_budget_cost`,`accounting_id`) values (1,'1',1,1,1),(2,'1',1,2,2),(3,'1',2,2,3),(4,'2',2,2,4),(5,'4',4,4,5),(6,'2',3,3,6),(7,'1',1,1,7);
 
 /*Table structure for table `cost_logs` */
 
@@ -132,11 +132,11 @@ CREATE TABLE `cost_logs` (
   `changedon` datetime DEFAULT NULL,
   `accounting_id` int(11) DEFAULT NULL,
   KEY `po_id` (`po_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `cost_logs` */
 
-insert  into `cost_logs`(`po_id`,`action`,`po_number`,`total_actual_cost`,`total_approved_budget_cost`,`changedon`,`accounting_id`) values (0,'Insert','1',1,1,'2017-12-13 14:10:05',1),(1,'Update','1',1,1,'2017-12-13 14:10:22',1),(0,'Insert','1',1,2,'2017-12-13 14:25:08',2),(0,'Insert','1',2,2,'2017-12-13 14:25:57',3),(0,'Insert','2',2,2,'2017-12-13 14:26:39',4),(0,'Insert','4',4,4,'2017-12-13 14:27:26',5),(0,'Insert','2',3,3,'2017-12-13 14:28:37',6),(1,'Update','1',1,1,'2017-12-13 14:34:16',1),(1,'Update','1',1,1,'2017-12-13 14:34:53',1),(2,'Update','1',1,2,'2017-12-13 14:35:35',2),(2,'Update','1',1,2,'2017-12-13 14:40:06',2),(3,'Update','1',2,2,'2017-12-13 14:40:15',3),(4,'Update','2',2,2,'2017-12-13 14:40:22',4),(6,'Update','2',3,3,'2017-12-13 14:40:32',6),(5,'Update','4',4,4,'2017-12-13 14:40:57',5);
+insert  into `cost_logs`(`po_id`,`action`,`po_number`,`total_actual_cost`,`total_approved_budget_cost`,`changedon`,`accounting_id`) values (0,'Insert','1',1,1,'2017-12-13 14:10:05',1),(1,'Update','1',1,1,'2017-12-13 14:10:22',1),(0,'Insert','1',1,2,'2017-12-13 14:25:08',2),(0,'Insert','1',2,2,'2017-12-13 14:25:57',3),(0,'Insert','2',2,2,'2017-12-13 14:26:39',4),(0,'Insert','4',4,4,'2017-12-13 14:27:26',5),(0,'Insert','2',3,3,'2017-12-13 14:28:37',6),(1,'Update','1',1,1,'2017-12-13 14:34:16',1),(1,'Update','1',1,1,'2017-12-13 14:34:53',1),(2,'Update','1',1,2,'2017-12-13 14:35:35',2),(2,'Update','1',1,2,'2017-12-13 14:40:06',2),(3,'Update','1',2,2,'2017-12-13 14:40:15',3),(4,'Update','2',2,2,'2017-12-13 14:40:22',4),(6,'Update','2',3,3,'2017-12-13 14:40:32',6),(5,'Update','4',4,4,'2017-12-13 14:40:57',5),(1,'Update','1',1,1,'2017-12-18 19:39:31',1),(0,'Insert','1',1,1,'2017-12-18 20:04:29',7),(7,'Update','1',1,1,'2017-12-18 20:05:07',7);
 
 /*Table structure for table `delivery` */
 
@@ -144,9 +144,9 @@ DROP TABLE IF EXISTS `delivery`;
 
 CREATE TABLE `delivery` (
   `pr_id` int(11) NOT NULL,
-  `notice_to_proceed` text,
-  `delivery_completion` text,
-  `acceptance_turn_over` text NOT NULL,
+  `notice_to_proceed` date DEFAULT NULL,
+  `delivery_completion` date DEFAULT NULL,
+  `acceptance_turn_over` date NOT NULL,
   `ci_no` text,
   `number_of_days_po_to_delivery` int(11) DEFAULT NULL,
   `number_of_days_delivery_to_cashier` int(11) DEFAULT NULL,
@@ -155,7 +155,7 @@ CREATE TABLE `delivery` (
 
 /*Data for the table `delivery` */
 
-insert  into `delivery`(`pr_id`,`notice_to_proceed`,`delivery_completion`,`acceptance_turn_over`,`ci_no`,`number_of_days_po_to_delivery`,`number_of_days_delivery_to_cashier`) values (1,'2017-01-01','2017-01-01','1','1',1,1),(4,'2017-01-01','2017-01-01','1','1',1,1),(5,'2017-02-02','2017-01-01','1','2',2,2),(6,'2017-03-03','2017-02-03','3','3',3,3),(7,'2017-02-02','2017-01-01','2','2',3,3),(8,'2017-02-02','2017-02-02','1','1',1,1);
+insert  into `delivery`(`pr_id`,`notice_to_proceed`,`delivery_completion`,`acceptance_turn_over`,`ci_no`,`number_of_days_po_to_delivery`,`number_of_days_delivery_to_cashier`) values (1,'2017-01-01','2017-01-01','0000-00-00','1',1,1),(4,'2017-01-01','2017-01-01','0000-00-00','1',1,1),(5,'2017-02-02','2017-01-01','0000-00-00','2',2,2),(6,'2017-03-03','2017-02-03','0000-00-00','3',3,3),(7,'2017-02-02','2017-01-01','0000-00-00','2',3,3),(8,'2017-02-02','2017-02-02','0000-00-00','1',1,1),(10,'2017-01-02','2017-01-01','0000-00-00','1',1,1);
 
 /*Table structure for table `delivery_logs` */
 
@@ -172,11 +172,11 @@ CREATE TABLE `delivery_logs` (
   `number_of_days_delivery_to_cashier` int(11) DEFAULT NULL,
   `changedon` datetime DEFAULT NULL,
   KEY `pr_id` (`pr_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 /*Data for the table `delivery_logs` */
 
-insert  into `delivery_logs`(`pr_id`,`action`,`notice_to_proceed`,`delivery_completion`,`acceptance_turn_over`,`ci_no`,`number_of_days_po_to_delivery`,`number_of_days_delivery_to_cashier`,`changedon`) values (1,'Insert','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:10:05'),(1,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:10:22'),(4,'Insert','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:25:08'),(5,'Insert','2017-02-02','2017-01-01','1','2',2,2,'2017-12-13 14:25:56'),(6,'Insert','2017-03-03','2017-02-03','3','3',3,3,'2017-12-13 14:26:39'),(7,'Insert','2017-02-02','2017-01-01','2','2',3,3,'2017-12-13 14:27:25'),(8,'Insert','2017-02-02','2017-02-02','1','1',1,1,'2017-12-13 14:28:36'),(1,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:34:15'),(1,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:34:53'),(4,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:35:34'),(4,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:40:05'),(5,'Update','2017-02-02','2017-01-01','1','2',2,2,'2017-12-13 14:40:15'),(6,'Update','2017-03-03','2017-02-03','3','3',3,3,'2017-12-13 14:40:22'),(8,'Update','2017-02-02','2017-02-02','1','1',1,1,'2017-12-13 14:40:32'),(7,'Update','2017-02-02','2017-01-01','2','2',3,3,'2017-12-13 14:40:57');
+insert  into `delivery_logs`(`pr_id`,`action`,`notice_to_proceed`,`delivery_completion`,`acceptance_turn_over`,`ci_no`,`number_of_days_po_to_delivery`,`number_of_days_delivery_to_cashier`,`changedon`) values (1,'Insert','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:10:05'),(1,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:10:22'),(4,'Insert','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:25:08'),(5,'Insert','2017-02-02','2017-01-01','1','2',2,2,'2017-12-13 14:25:56'),(6,'Insert','2017-03-03','2017-02-03','3','3',3,3,'2017-12-13 14:26:39'),(7,'Insert','2017-02-02','2017-01-01','2','2',3,3,'2017-12-13 14:27:25'),(8,'Insert','2017-02-02','2017-02-02','1','1',1,1,'2017-12-13 14:28:36'),(1,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:34:15'),(1,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:34:53'),(4,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:35:34'),(4,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-13 14:40:05'),(5,'Update','2017-02-02','2017-01-01','1','2',2,2,'2017-12-13 14:40:15'),(6,'Update','2017-03-03','2017-02-03','3','3',3,3,'2017-12-13 14:40:22'),(8,'Update','2017-02-02','2017-02-02','1','1',1,1,'2017-12-13 14:40:32'),(7,'Update','2017-02-02','2017-01-01','2','2',3,3,'2017-12-13 14:40:57'),(1,'Update','2017-01-01','2017-01-01','1','1',1,1,'2017-12-18 19:39:31'),(10,'Insert','2017-01-02','2017-01-01','1','1',1,1,'2017-12-18 20:04:28'),(10,'Update','2017-01-02','2017-01-01','1','1',1,1,'2017-12-18 20:05:07');
 
 /*Table structure for table `item_logs` */
 
@@ -220,11 +220,11 @@ CREATE TABLE `particular_logs` (
   `particulars_details` text,
   `changedon` datetime DEFAULT NULL,
   KEY `pr_id` (`pr_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 /*Data for the table `particular_logs` */
 
-insert  into `particular_logs`(`pr_id`,`action`,`pr_number`,`pr_date`,`request_date`,`date_required`,`particulars_details`,`changedon`) values (1,'Insert','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:10:04'),(1,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:10:22'),(2,'Insert','1','2017-12-12','2017-12-12','2017-12-12','sample','2017-12-13 14:23:28'),(3,'Insert','2','2017-02-02','2017-01-01','2017-01-12','food','2017-12-13 14:24:45'),(4,'Insert','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:25:08'),(5,'Insert','2','2017-02-02','2017-01-02','2017-02-02','2','2017-12-13 14:25:56'),(6,'Insert','3','2017-03-03','2017-03-03','2017-02-03','3','2017-12-13 14:26:38'),(7,'Insert','4','2017-04-04','2017-02-04','2017-02-02','2','2017-12-13 14:27:25'),(8,'Insert','6','2017-06-06','2017-02-03','2017-02-03','3','2017-12-13 14:28:36'),(1,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:34:15'),(1,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:34:52'),(4,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:35:34'),(4,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:40:05'),(5,'Update','2','2017-02-02','2017-01-02','2017-02-02','2','2017-12-13 14:40:14'),(6,'Update','3','2017-03-03','2017-03-03','2017-02-03','3','2017-12-13 14:40:22'),(8,'Update','6','2017-06-06','2017-02-03','2017-02-03','3','2017-12-13 14:40:31'),(7,'Update','4','2017-04-04','2017-02-04','2017-02-02','2','2017-12-13 14:40:57');
+insert  into `particular_logs`(`pr_id`,`action`,`pr_number`,`pr_date`,`request_date`,`date_required`,`particulars_details`,`changedon`) values (1,'Insert','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:10:04'),(1,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:10:22'),(2,'Insert','1','2017-12-12','2017-12-12','2017-12-12','sample','2017-12-13 14:23:28'),(3,'Insert','2','2017-02-02','2017-01-01','2017-01-12','food','2017-12-13 14:24:45'),(4,'Insert','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:25:08'),(5,'Insert','2','2017-02-02','2017-01-02','2017-02-02','2','2017-12-13 14:25:56'),(6,'Insert','3','2017-03-03','2017-03-03','2017-02-03','3','2017-12-13 14:26:38'),(7,'Insert','4','2017-04-04','2017-02-04','2017-02-02','2','2017-12-13 14:27:25'),(8,'Insert','6','2017-06-06','2017-02-03','2017-02-03','3','2017-12-13 14:28:36'),(1,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:34:15'),(1,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:34:52'),(4,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:35:34'),(4,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-13 14:40:05'),(5,'Update','2','2017-02-02','2017-01-02','2017-02-02','2','2017-12-13 14:40:14'),(6,'Update','3','2017-03-03','2017-03-03','2017-02-03','3','2017-12-13 14:40:22'),(8,'Update','6','2017-06-06','2017-02-03','2017-02-03','3','2017-12-13 14:40:31'),(7,'Update','4','2017-04-04','2017-02-04','2017-02-02','2','2017-12-13 14:40:57'),(1,'Update','1','2017-01-01','2017-01-01','2017-01-01','1','2017-12-18 19:39:30'),(0,'Insert','23','2017-12-20','2017-12-18','2017-12-21','wielding rods','2017-12-18 19:52:07'),(0,'Insert','1','2018-01-01','2018-01-01','2017-01-01','1','2017-12-18 20:04:28'),(10,'Update','1','2018-01-01','2018-01-01','2017-01-01','1','2017-12-18 20:05:06'),(0,'Insert','333','2107-12-20','2017-12-18','2017-12-23','Furniture','2017-12-18 20:11:47'),(0,'Insert','123','2017-12-19','2017-12-18','2017-12-23','hairs','2017-12-18 21:04:09');
 
 /*Table structure for table `particulars` */
 
@@ -239,11 +239,11 @@ CREATE TABLE `particulars` (
   `supplier_id` int(11) NOT NULL,
   `particulars_details` text,
   PRIMARY KEY (`pr_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 /*Data for the table `particulars` */
 
-insert  into `particulars`(`pr_id`,`pr_number`,`pr_date`,`request_date`,`date_required`,`supplier_id`,`particulars_details`) values (1,'1','2017-01-01','2017-01-01','2017-01-01',1,'1'),(2,'1','2017-12-12','2017-12-12','2017-12-12',2,'sample'),(3,'2','2017-02-02','2017-01-01','2017-01-12',3,'food'),(4,'1','2017-01-01','2017-01-01','2017-01-01',4,'1'),(5,'2','2017-02-02','2017-01-02','2017-02-02',5,'2'),(6,'3','2017-03-03','2017-03-03','2017-02-03',6,'3'),(7,'4','2017-04-04','2017-02-04','2017-02-02',7,'2'),(8,'6','2017-06-06','2017-02-03','2017-02-03',8,'3');
+insert  into `particulars`(`pr_id`,`pr_number`,`pr_date`,`request_date`,`date_required`,`supplier_id`,`particulars_details`) values (1,'1','2017-01-01','2017-01-01','2017-01-01',1,'1'),(2,'1','2017-12-12','2017-12-12','2017-12-12',2,'sample'),(3,'2','2017-02-02','2017-01-01','2017-01-12',3,'food'),(4,'1','2017-01-01','2017-01-01','2017-01-01',4,'1'),(5,'2','2017-02-02','2017-01-02','2017-02-02',5,'2'),(6,'3','2017-03-03','2017-03-03','2017-02-03',6,'3'),(7,'4','2017-04-04','2017-02-04','2017-02-02',7,'2'),(8,'6','2017-06-06','2017-02-03','2017-02-03',8,'3'),(9,'23','2017-12-20','2017-12-18','2017-12-21',9,'wielding rods'),(10,'1','2018-01-01','2018-01-01','2017-01-01',11,'1'),(11,'333','2107-12-20','2017-12-18','2017-12-23',12,'Furniture'),(12,'123','2017-12-19','2017-12-18','2017-12-23',13,'hairs');
 
 /*Table structure for table `quantity` */
 
@@ -258,7 +258,7 @@ CREATE TABLE `quantity` (
 
 /*Data for the table `quantity` */
 
-insert  into `quantity`(`quantity_id`,`pieces`,`pr_id`) values (1,0,0),(2,0,0),(3,0,0),(4,0,0),(5,0,0),(6,0,0),(7,1,1);
+insert  into `quantity`(`quantity_id`,`pieces`,`pr_id`) values (1,0,0),(2,0,0),(3,0,0),(4,0,0),(5,0,0),(6,0,0),(7,0,0);
 
 /*Table structure for table `remarks` */
 
@@ -270,11 +270,11 @@ CREATE TABLE `remarks` (
   `pr_id` int(11) NOT NULL,
   PRIMARY KEY (`remarks_id`),
   KEY `idx_remarks` (`remarks_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `remarks` */
 
-insert  into `remarks`(`remarks_id`,`remarks_details`,`pr_id`) values (1,'PAYABLE',1),(2,'PAYABLE',4),(3,'PAYABLE',5),(4,'PAYABLE',6),(5,'PAYABLE',7),(6,'PAYABLE',8);
+insert  into `remarks`(`remarks_id`,`remarks_details`,`pr_id`) values (1,'PAYABLE',1),(2,'PAYABLE',4),(3,'PAYABLE',5),(4,'PAYABLE',6),(5,'PAYABLE',7),(6,'PAYABLE',8),(7,'PAYABLE',10);
 
 /*Table structure for table `remarks_logs` */
 
@@ -287,11 +287,11 @@ CREATE TABLE `remarks_logs` (
   `remarks_details` text,
   `changedon` datetime DEFAULT NULL,
   KEY `remarks_id` (`remarks_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 /*Data for the table `remarks_logs` */
 
-insert  into `remarks_logs`(`remarks_id`,`action`,`pr_id`,`remarks_details`,`changedon`) values (1,'Insert',1,'PAYABLE','2017-12-13 14:10:05'),(2,'Update',1,'PAYABLE','2017-12-13 14:10:22'),(3,'Insert',4,'PAYABLE','2017-12-13 14:25:08'),(4,'Insert',5,'PAYABLE','2017-12-13 14:25:57'),(5,'Insert',6,'PAYABLE','2017-12-13 14:26:39'),(6,'Insert',7,'PAYABLE','2017-12-13 14:27:26'),(7,'Insert',8,'PAYABLE','2017-12-13 14:28:37'),(8,'Update',1,'PAYABLE','2017-12-13 14:34:15'),(9,'Update',1,'PAYABLE','2017-12-13 14:34:53'),(10,'Update',4,'PAYABLE','2017-12-13 14:35:34'),(11,'Update',4,'PAYABLE','2017-12-13 14:40:05'),(12,'Update',5,'PAYABLE','2017-12-13 14:40:15'),(13,'Update',6,'PAYABLE','2017-12-13 14:40:22'),(14,'Update',8,'PAYABLE','2017-12-13 14:40:32'),(15,'Update',7,'PAYABLE','2017-12-13 14:40:57');
+insert  into `remarks_logs`(`remarks_id`,`action`,`pr_id`,`remarks_details`,`changedon`) values (1,'Insert',1,'PAYABLE','2017-12-13 14:10:05'),(2,'Update',1,'PAYABLE','2017-12-13 14:10:22'),(3,'Insert',4,'PAYABLE','2017-12-13 14:25:08'),(4,'Insert',5,'PAYABLE','2017-12-13 14:25:57'),(5,'Insert',6,'PAYABLE','2017-12-13 14:26:39'),(6,'Insert',7,'PAYABLE','2017-12-13 14:27:26'),(7,'Insert',8,'PAYABLE','2017-12-13 14:28:37'),(8,'Update',1,'PAYABLE','2017-12-13 14:34:15'),(9,'Update',1,'PAYABLE','2017-12-13 14:34:53'),(10,'Update',4,'PAYABLE','2017-12-13 14:35:34'),(11,'Update',4,'PAYABLE','2017-12-13 14:40:05'),(12,'Update',5,'PAYABLE','2017-12-13 14:40:15'),(13,'Update',6,'PAYABLE','2017-12-13 14:40:22'),(14,'Update',8,'PAYABLE','2017-12-13 14:40:32'),(15,'Update',7,'PAYABLE','2017-12-13 14:40:57'),(16,'Update',1,'PAYABLE','2017-12-18 19:39:31'),(17,'Insert',10,'PAYABLE','2017-12-18 20:04:29'),(18,'Update',10,'PAYABLE','2017-12-18 20:05:07');
 
 /*Table structure for table `req_div` */
 
@@ -301,11 +301,11 @@ CREATE TABLE `req_div` (
   `pr_id` int(11) NOT NULL AUTO_INCREMENT,
   `division` text,
   KEY `pr_id` (`pr_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 /*Data for the table `req_div` */
 
-insert  into `req_div`(`pr_id`,`division`) values (1,'1'),(4,'1'),(5,'2'),(6,'3'),(7,'2'),(8,'3');
+insert  into `req_div`(`pr_id`,`division`) values (1,'1'),(4,'1'),(5,'2'),(6,'3'),(7,'2'),(8,'3'),(10,'1');
 
 /*Table structure for table `req_div_logs` */
 
@@ -331,11 +331,11 @@ CREATE TABLE `req_logs` (
   `division` text,
   `changedat` datetime NOT NULL,
   KEY `pr_id` (`pr_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 /*Data for the table `req_logs` */
 
-insert  into `req_logs`(`action`,`pr_id`,`division`,`changedat`) values ('Insert',1,'1','2017-12-13 14:10:04'),('Update',1,'1','2017-12-13 14:10:23'),('Insert',4,'1','2017-12-13 14:25:08'),('Insert',5,'2','2017-12-13 14:25:56'),('Insert',6,'3','2017-12-13 14:26:39'),('Insert',7,'2','2017-12-13 14:27:25'),('Insert',8,'3','2017-12-13 14:28:36'),('Update',1,'1','2017-12-13 14:34:16'),('Update',1,'1','2017-12-13 14:34:53'),('Update',4,'1','2017-12-13 14:35:35'),('Update',4,'1','2017-12-13 14:40:06'),('Update',5,'2','2017-12-13 14:40:15'),('Update',6,'3','2017-12-13 14:40:22'),('Update',8,'3','2017-12-13 14:40:32'),('Update',7,'2','2017-12-13 14:40:57');
+insert  into `req_logs`(`action`,`pr_id`,`division`,`changedat`) values ('Insert',1,'1','2017-12-13 14:10:04'),('Update',1,'1','2017-12-13 14:10:23'),('Insert',4,'1','2017-12-13 14:25:08'),('Insert',5,'2','2017-12-13 14:25:56'),('Insert',6,'3','2017-12-13 14:26:39'),('Insert',7,'2','2017-12-13 14:27:25'),('Insert',8,'3','2017-12-13 14:28:36'),('Update',1,'1','2017-12-13 14:34:16'),('Update',1,'1','2017-12-13 14:34:53'),('Update',4,'1','2017-12-13 14:35:35'),('Update',4,'1','2017-12-13 14:40:06'),('Update',5,'2','2017-12-13 14:40:15'),('Update',6,'3','2017-12-13 14:40:22'),('Update',8,'3','2017-12-13 14:40:32'),('Update',7,'2','2017-12-13 14:40:57'),('Update',1,'1','2017-12-18 19:39:31'),('Insert',10,'1','2017-12-18 20:04:28'),('Update',10,'1','2017-12-18 20:05:08');
 
 /*Table structure for table `supplier` */
 
@@ -346,11 +346,11 @@ CREATE TABLE `supplier` (
   `supplier_name` text,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`supplier_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 /*Data for the table `supplier` */
 
-insert  into `supplier`(`supplier_id`,`supplier_name`,`user_id`) values (1,'1',2),(2,'jun2',3),(3,'1',3),(4,'1',3),(5,'2',3),(6,'2',3),(7,'2',3),(8,'2',3);
+insert  into `supplier`(`supplier_id`,`supplier_name`,`user_id`) values (1,'1',2),(2,'jun2',3),(3,'1',3),(4,'1',3),(5,'2',3),(6,'2',3),(7,'2',3),(8,'2',3),(9,'warehousepp',2),(10,'1',2),(11,'1',2),(12,'ME',2),(13,'Kikshop',2);
 
 /*Table structure for table `supplier_logs` */
 
@@ -363,11 +363,11 @@ CREATE TABLE `supplier_logs` (
   `supplier_name` text,
   `changedon` date DEFAULT NULL,
   KEY `supplier_id` (`supplier_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 /*Data for the table `supplier_logs` */
 
-insert  into `supplier_logs`(`action`,`supplier_id`,`user_id`,`supplier_name`,`changedon`) values ('Insert',1,2,'1','2017-12-13'),('Update',1,2,'1','2017-12-13'),('Insert',2,3,'jun2','2017-12-13'),('Insert',3,3,'1','2017-12-13'),('Insert',4,3,'1','2017-12-13'),('Insert',5,3,'2','2017-12-13'),('Insert',6,3,'2','2017-12-13'),('Insert',7,3,'2','2017-12-13'),('Insert',8,3,'2','2017-12-13'),('Update',1,2,'1','2017-12-13'),('Update',1,2,'1','2017-12-13'),('Update',4,3,'1','2017-12-13'),('Update',4,3,'1','2017-12-13'),('Update',5,3,'2','2017-12-13'),('Update',6,3,'2','2017-12-13'),('Update',8,3,'2','2017-12-13'),('Update',7,3,'2','2017-12-13');
+insert  into `supplier_logs`(`action`,`supplier_id`,`user_id`,`supplier_name`,`changedon`) values ('Insert',1,2,'1','2017-12-13'),('Update',1,2,'1','2017-12-13'),('Insert',2,3,'jun2','2017-12-13'),('Insert',3,3,'1','2017-12-13'),('Insert',4,3,'1','2017-12-13'),('Insert',5,3,'2','2017-12-13'),('Insert',6,3,'2','2017-12-13'),('Insert',7,3,'2','2017-12-13'),('Insert',8,3,'2','2017-12-13'),('Update',1,2,'1','2017-12-13'),('Update',1,2,'1','2017-12-13'),('Update',4,3,'1','2017-12-13'),('Update',4,3,'1','2017-12-13'),('Update',5,3,'2','2017-12-13'),('Update',6,3,'2','2017-12-13'),('Update',8,3,'2','2017-12-13'),('Update',7,3,'2','2017-12-13'),('Update',1,2,'1','2017-12-18'),('Insert',0,2,'warehousepp','2017-12-18'),('Insert',0,2,'1','2017-12-18'),('Insert',0,2,'1','2017-12-18'),('Update',11,2,'1','2017-12-18'),('Insert',0,2,'ME','2017-12-18'),('Insert',0,2,'Kikshop','2017-12-18');
 
 /*Table structure for table `tbl_uploads` */
 
@@ -887,7 +887,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertIntoCost`(po_number varchar(10),total_actual_cost int,total_approved_budget_cost int,accounting_id int)
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertIntoCost`(po_number TEXT,total_actual_cost int,total_approved_budget_cost int,accounting_id int)
 begin
 insert into cost(po_number,total_actual_cost,total_approved_budget_cost,accounting_id)
 values(po_number,total_actual_cost,total_approved_budget_cost,accounting_id);
@@ -900,8 +900,8 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertintoDelivery`(pr_id int,notice_to_proceed TEXT,delivery_completion TEXT,
-acceptance_turn_over TEXT,ci_no text,number_of_days_po_to_delivery int,number_of_days_delivery_to_cashier INT)
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertintoDelivery`(pr_id int,notice_to_proceed DATE,delivery_completion DATE,
+acceptance_turn_over DATE,ci_no text,number_of_days_po_to_delivery int,number_of_days_delivery_to_cashier INT)
 begin
 insert into delivery(pr_id,notice_to_proceed ,delivery_completion ,
 acceptance_turn_over ,ci_no ,number_of_days_po_to_delivery ,number_of_days_delivery_to_cashier )
@@ -1004,12 +1004,12 @@ DROP TABLE IF EXISTS `home`;
  `particulars_details` text ,
  `total_approved_budget_cost` int(11) ,
  `division` text ,
- `po_number` varchar(10) ,
+ `po_number` text ,
  `supplier_name` text ,
  `total_actual_cost` int(11) ,
- `notice_to_proceed` text ,
- `delivery_completion` text ,
- `acceptance_turn_over` text ,
+ `notice_to_proceed` date ,
+ `delivery_completion` date ,
+ `acceptance_turn_over` date ,
  `ci_no` text ,
  `accounting_date` date ,
  `cashier_date` date ,
@@ -1031,12 +1031,12 @@ DROP TABLE IF EXISTS `ininventory`;
  `particulars_details` text ,
  `total_approved_budget_cost` int(11) ,
  `division` text ,
- `po_number` varchar(10) ,
+ `po_number` text ,
  `supplier_name` text ,
  `total_actual_cost` int(11) ,
- `notice_to_proceed` text ,
- `delivery_completion` text ,
- `acceptance_turn_over` text ,
+ `notice_to_proceed` date ,
+ `delivery_completion` date ,
+ `acceptance_turn_over` date ,
  `ci_no` text ,
  `accounting_date` date ,
  `cashier_date` date ,
@@ -1060,12 +1060,12 @@ DROP TABLE IF EXISTS `outinventory`;
  `particulars_details` text ,
  `total_approved_budget_cost` int(11) ,
  `division` text ,
- `po_number` varchar(10) ,
+ `po_number` text ,
  `supplier_name` text ,
  `total_actual_cost` int(11) ,
- `notice_to_proceed` text ,
- `delivery_completion` text ,
- `acceptance_turn_over` text ,
+ `notice_to_proceed` date ,
+ `delivery_completion` date ,
+ `acceptance_turn_over` date ,
  `ci_no` text ,
  `accounting_date` date ,
  `cashier_date` date ,
@@ -1089,12 +1089,12 @@ DROP TABLE IF EXISTS `output`;
  `particulars_details` text ,
  `total_approved_budget_cost` int(11) ,
  `division` text ,
- `po_number` varchar(10) ,
+ `po_number` text ,
  `supplier_name` text ,
  `total_actual_cost` int(11) ,
- `notice_to_proceed` text ,
- `delivery_completion` text ,
- `acceptance_turn_over` text ,
+ `notice_to_proceed` date ,
+ `delivery_completion` date ,
+ `acceptance_turn_over` date ,
  `ci_no` text ,
  `accounting_date` date ,
  `cashier_date` date ,
@@ -1119,12 +1119,12 @@ DROP TABLE IF EXISTS `remarksview`;
  `particulars_details` text ,
  `total_approved_budget_cost` int(11) ,
  `division` text ,
- `po_number` varchar(10) ,
+ `po_number` text ,
  `supplier_name` text ,
  `total_actual_cost` int(11) ,
- `notice_to_proceed` text ,
- `delivery_completion` text ,
- `acceptance_turn_over` text ,
+ `notice_to_proceed` date ,
+ `delivery_completion` date ,
+ `acceptance_turn_over` date ,
  `ci_no` text ,
  `accounting_date` date ,
  `cashier_date` date ,
