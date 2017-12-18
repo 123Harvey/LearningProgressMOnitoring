@@ -74,7 +74,13 @@ todo(' ');
 //getting id from url
 $_SESSION['prid'] = $_GET['prid'];  
 //selecting data associated with this particular id
-  $con = viaAttempConMessageErrno();
+  $con = new mysqli($_SESSION['server'], $_SESSION['username'],$_SESSION['password'],$_SESSION['dbname']);
+
+  if($con->connect_errno){
+
+    die("Could not connect: ".$con->connect_error);
+  }
+  
   $sql = "SELECT * FROM particulars WHERE pr_id = ".$_SESSION['prid'].";";
   $result = $con->query($sql);
 
